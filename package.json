@@ -1,0 +1,41 @@
+{
+  "name": "sql-formatter",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force",
+    "lint": "prettier . --check",
+    "lint:fix": "prettier . --write"
+  },
+  "dependencies": {
+    "@vueuse/core": "^11.0.1",
+    "prettier": "^3.3.3",
+    "prettier-plugin-sql": "^0.18.1",
+    "vue": "^3.4.29",
+    "vue-i18n": "^9.14.0",
+    "vue-router": "^4.3.3"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.14.5",
+    "@types/prismjs": "^1.26.4",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vitejs/plugin-vue-jsx": "^4.0.0",
+    "@vue/tsconfig": "^0.5.1",
+    "autoprefixer": "^10.4.20",
+    "babel-plugin-prismjs": "^2.1.0",
+    "daisyui": "^4.12.10",
+    "npm-run-all2": "^6.2.0",
+    "postcss": "^8.4.41",
+    "prettier-plugin-organize-imports": "^4.0.0",
+    "prismjs": "^1.29.0",
+    "tailwindcss": "^3.4.10",
+    "typescript": "~5.4.0",
+    "vite": "^5.3.1",
+    "vite-plugin-prismjs": "^0.0.11",
+    "vue-tsc": "^2.0.21"
+  }
+}
