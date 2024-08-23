@@ -144,6 +144,7 @@ watch(language, value => (locale.value = value), { immediate: true })
           <option value="fr">{{ t('message.fr') }}</option>
           <option value="ja">{{ t('message.ja') }}</option>
           <option value="ru">{{ t('message.ru') }}</option>
+          <option value="de">{{ t('message.de') }}</option>
         </select>
       </label>
     </div>
