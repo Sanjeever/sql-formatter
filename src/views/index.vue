@@ -38,7 +38,7 @@ watch(language, value => (locale.value = value), { immediate: true })
     <div class="w-1/5 p-4">
       <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">{{ t('message.database') }}</span>
+          <span class="label-text truncate">{{ t('message.database') }}</span>
         </div>
         <select v-model="options.database" class="select select-bordered">
           <option v-for="item in optionItem.database">{{ item }}</option>
@@ -48,7 +48,7 @@ watch(language, value => (locale.value = value), { immediate: true })
     <div class="w-1/5 p-4">
       <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">{{ t('message.dialect') }}</span>
+          <span class="label-text truncate">{{ t('message.dialect') }}</span>
         </div>
         <select
           v-model="(options as any).language"
@@ -60,7 +60,7 @@ watch(language, value => (locale.value = value), { immediate: true })
     <div class="w-1/5 p-4">
       <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">{{ t('message.keyword') }}</span>
+          <span class="label-text truncate">{{ t('message.keyword') }}</span>
         </div>
         <select v-model="options.keywordCase" class="select select-bordered">
           <option v-for="item in optionItem.keywordCase">{{ item }}</option>
@@ -70,7 +70,7 @@ watch(language, value => (locale.value = value), { immediate: true })
     <div class="w-1/5 p-4">
       <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">{{ t('message.dataType') }}</span>
+          <span class="label-text truncate">{{ t('message.dataType') }}</span>
         </div>
         <select v-model="options.dataTypeCase" class="select select-bordered">
           <option v-for="item in optionItem.dataTypeCase">{{ item }}</option>
@@ -80,7 +80,7 @@ watch(language, value => (locale.value = value), { immediate: true })
     <div class="w-1/5 p-4">
       <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">{{ t('message.func') }}</span>
+          <span class="label-text truncate">{{ t('message.func') }}</span>
         </div>
         <select v-model="options.functionCase" class="select select-bordered">
           <option v-for="item in optionItem.functionCase">{{ item }}</option>
@@ -91,7 +91,7 @@ watch(language, value => (locale.value = value), { immediate: true })
     <div class="w-1/5 p-4">
       <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">{{ t('message.identifier') }}</span>
+          <span class="label-text truncate">{{ t('message.identifier') }}</span>
         </div>
         <select v-model="options.identifierCase" class="select select-bordered">
           <option v-for="item in optionItem.identifierCase">{{ item }}</option>
@@ -101,7 +101,7 @@ watch(language, value => (locale.value = value), { immediate: true })
     <div class="w-1/5 p-4">
       <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">{{ t('message.indentStyle') }}</span>
+          <span class="label-text truncate">{{ t('message.indentStyle') }}</span>
         </div>
         <select v-model="options.indentStyle" class="select select-bordered">
           <option v-for="item in optionItem.indentStyle">{{ item }}</option>
@@ -111,7 +111,7 @@ watch(language, value => (locale.value = value), { immediate: true })
     <div class="w-1/5 p-4">
       <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">{{ t('message.logicalOperator') }}</span>
+          <span class="label-text truncate">{{ t('message.logicalOperator') }}</span>
         </div>
         <select
           v-model="options.logicalOperatorNewline"
@@ -125,7 +125,7 @@ watch(language, value => (locale.value = value), { immediate: true })
     <div class="w-1/5 p-4">
       <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">{{ t('message.expressionWidth') }}</span>
+          <span class="label-text truncate">{{ t('message.expressionWidth') }}</span>
         </div>
         <input
           v-model="options.expressionWidth"
@@ -136,7 +136,7 @@ watch(language, value => (locale.value = value), { immediate: true })
     <div class="w-1/5 p-4">
       <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">{{ t('message.language') }}</span>
+          <span class="label-text truncate">{{ t('message.language') }}</span>
         </div>
         <select v-model="language" class="select select-bordered">
           <option value="zh">{{ t('message.zh') }}</option>
