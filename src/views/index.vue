@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import CInput from '@/components/input/index.vue'
 import CSelect from '@/components/select/index.vue'
-import { defaultValue, formatter } from '@/utils'
-import { optionItem } from '@/utils/optionItem'
+import { defaultValue, formatter, optionItem } from '@/utils'
 import { useStorage } from '@vueuse/core'
 import type { SqlBaseOptions } from 'prettier-plugin-sql'
 import 'prismjs/themes/prism-tomorrow.min.css'
