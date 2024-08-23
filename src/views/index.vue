@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import CInput from '@/components/input/index.vue'
+import CSelect from '@/components/select/index.vue'
 import { defaultValue, formatter } from '@/utils'
 import { optionItem } from '@/utils/optionItem'
 import { useStorage } from '@vueuse/core'
@@ -35,103 +37,62 @@ watch(language, value => (locale.value = value), { immediate: true })
 <template>
   <!-- Configuration Area -->
   <div class="flex flex-wrap w-3/4">
+    <!-- Row 1 -->
     <div class="w-1/5 p-4">
-      <label class="form-control w-full max-w-xs">
-        <div class="label">
-          <span class="label-text truncate">{{ t('message.database') }}</span>
-        </div>
-        <select v-model="options.database" class="select select-bordered">
-          <option v-for="item in optionItem.database">{{ item }}</option>
-        </select>
-      </label>
+      <c-select
+        v-model="options.database"
+        :label="t('message.database')"
+        :options="optionItem.database" />
     </div>
     <div class="w-1/5 p-4">
-      <label class="form-control w-full max-w-xs">
-        <div class="label">
-          <span class="label-text truncate">{{ t('message.dialect') }}</span>
-        </div>
-        <select
-          v-model="(options as any).language"
-          class="select select-bordered">
-          <option v-for="item in optionItem.language">{{ item }}</option>
-        </select>
-      </label>
+      <c-select
+        v-model="(options as any).language"
+        :label="t('message.dialect')"
+        :options="optionItem.language" />
     </div>
     <div class="w-1/5 p-4">
-      <label class="form-control w-full max-w-xs">
-        <div class="label">
-          <span class="label-text truncate">{{ t('message.keyword') }}</span>
-        </div>
-        <select v-model="options.keywordCase" class="select select-bordered">
-          <option v-for="item in optionItem.keywordCase">{{ item }}</option>
-        </select>
-      </label>
+      <c-select
+        v-model="options.keywordCase"
+        :label="t('message.keyword')"
+        :options="optionItem.keywordCase" />
     </div>
     <div class="w-1/5 p-4">
-      <label class="form-control w-full max-w-xs">
-        <div class="label">
-          <span class="label-text truncate">{{ t('message.dataType') }}</span>
-        </div>
-        <select v-model="options.dataTypeCase" class="select select-bordered">
-          <option v-for="item in optionItem.dataTypeCase">{{ item }}</option>
-        </select>
-      </label>
+      <c-select
+        v-model="options.dataTypeCase"
+        :label="t('message.dataType')"
+        :options="optionItem.dataTypeCase" />
     </div>
     <div class="w-1/5 p-4">
-      <label class="form-control w-full max-w-xs">
-        <div class="label">
-          <span class="label-text truncate">{{ t('message.func') }}</span>
-        </div>
-        <select v-model="options.functionCase" class="select select-bordered">
-          <option v-for="item in optionItem.functionCase">{{ item }}</option>
-        </select>
-      </label>
+      <c-select
+        v-model="options.functionCase"
+        :label="t('message.func')"
+        :options="optionItem.functionCase" />
     </div>
 
+    <!-- Row 2 -->
     <div class="w-1/5 p-4">
-      <label class="form-control w-full max-w-xs">
-        <div class="label">
-          <span class="label-text truncate">{{ t('message.identifier') }}</span>
-        </div>
-        <select v-model="options.identifierCase" class="select select-bordered">
-          <option v-for="item in optionItem.identifierCase">{{ item }}</option>
-        </select>
-      </label>
+      <c-select
+        v-model="options.identifierCase"
+        :label="t('message.identifier')"
+        :options="optionItem.identifierCase" />
     </div>
     <div class="w-1/5 p-4">
-      <label class="form-control w-full max-w-xs">
-        <div class="label">
-          <span class="label-text truncate">{{ t('message.indentStyle') }}</span>
-        </div>
-        <select v-model="options.indentStyle" class="select select-bordered">
-          <option v-for="item in optionItem.indentStyle">{{ item }}</option>
-        </select>
-      </label>
+      <c-select
+        v-model="options.indentStyle"
+        :label="t('message.indentStyle')"
+        :options="optionItem.indentStyle" />
     </div>
     <div class="w-1/5 p-4">
-      <label class="form-control w-full max-w-xs">
-        <div class="label">
-          <span class="label-text truncate">{{ t('message.logicalOperator') }}</span>
-        </div>
-        <select
-          v-model="options.logicalOperatorNewline"
-          class="select select-bordered">
-          <option v-for="item in optionItem.logicalOperatorNewline">
-            {{ item }}
-          </option>
-        </select>
-      </label>
+      <c-select
+        v-model="options.logicalOperatorNewline"
+        :label="t('message.logicalOperator')"
+        :options="optionItem.logicalOperatorNewline" />
     </div>
     <div class="w-1/5 p-4">
-      <label class="form-control w-full max-w-xs">
-        <div class="label">
-          <span class="label-text truncate">{{ t('message.expressionWidth') }}</span>
-        </div>
-        <input
-          v-model="options.expressionWidth"
-          type="number"
-          class="input input-bordered w-full max-w-xs" />
-      </label>
+      <c-input
+        v-model="options.expressionWidth"
+        :label="t('message.expressionWidth')"
+        type="number" />
     </div>
     <div class="w-1/5 p-4">
       <label class="form-control w-full max-w-xs">
