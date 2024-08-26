@@ -33,6 +33,9 @@ onMounted(() => {
     language: 'sql',
     theme: 'vs-dark',
     wordWrap: 'on',
+    minimap: {
+      enabled: false,
+    },
   })
 
   editor.onDidChangeModelContent(() => {
