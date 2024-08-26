@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import CInput from '@/components/input/index.vue'
+import Monaco from '@/components/monaco/index.vue'
 import CSelect from '@/components/select/index.vue'
 import { defaultValue, formatter, optionItem } from '@/utils'
 import { useStorage } from '@vueuse/core'
@@ -113,11 +114,9 @@ watch(language, value => (locale.value = value), { immediate: true })
   <!-- Code editing area -->
   <div class="flex w-3/4 h-3/5">
     <div class="w-1/2 p-2">
-      <textarea
-        v-model="code"
-        class="w-full h-full textarea textarea-bordered"></textarea>
+      <Monaco v-model="code" />
     </div>
-    <div class="w-1/2">
+    <div class="w-1/2 p-2">
       <div class="w-full h-full overflow-y-auto">
         <pre><code v-html="highlightedCode" class="language-sql line-numbers"></code></pre>
       </div>

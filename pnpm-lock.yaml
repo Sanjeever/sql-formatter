@@ -8,6 +8,9 @@ dependencies:
   '@vueuse/core':
     specifier: ^11.0.1
     version: 11.0.1(vue@3.4.38)
+  monaco-editor:
+    specifier: ^0.51.0
+    version: 0.51.0
   prettier:
     specifier: ^3.3.3
     version: 3.3.3
@@ -2212,6 +2215,13 @@ packages:
       }
     engines: { node: '>=16 || 14 >=14.17' }
     dev: true
+
+  /monaco-editor@0.51.0:
+    resolution:
+      {
+        integrity: sha512-xaGwVV1fq343cM7aOYB6lVE4Ugf0UyimdD/x5PWcWBMKENwectaEu77FAN7c5sFiyumqeJdX1RPTh1ocioyDjw==,
+      }
+    dev: false
 
   /moo@0.5.2:
     resolution:
